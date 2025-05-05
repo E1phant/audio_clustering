@@ -1,12 +1,13 @@
 import os
 import hydra
+from hydra.core.hydra_config import HydraConfig
 from omegaconf import DictConfig
 
 from src.ClassicalClustering import SongClusterer
 from src.utils import write_json, print_playlist_dict
 
 
-@hydra.main(version_base=None, config_path="configs", config_name="classical_config")
+@hydra.main(version_base="1.2", config_path="configs", config_name="classical_config")
 def main(cfg: DictConfig):
     clusterer = SongClusterer(
         data_path=cfg.path,
@@ -21,7 +22,10 @@ def main(cfg: DictConfig):
     playlists = clusterer.cluster_songs()
     print_playlist_dict(playlists)
 
-    out_file = os.path.join(cfg.path, "playlists_v1.json")
+    hydra_cfg  = HydraConfig.get()
+    output_dir = hydra_cfg.runtime.output_dir
+
+    out_file = os.path.join(output_dir, "playlists_v1.json")
     write_json(out_file, playlists)
     print(f"Wrote {out_file!r}")
 

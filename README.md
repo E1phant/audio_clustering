@@ -44,12 +44,7 @@ Two modes are available:
 
 4. **Install dependencies**
    ```bash
-   poetry install --with dev
-   ```
-
-   If you get `Group(s) not found: dev`, just run:
-   ```bash
-   poetry install --no-root
+   poetry install
    ```
 
 5. **Deactivate environment**
@@ -71,7 +66,7 @@ All defaults are stored in the `configs/` folder:
 - `configs/classical_config.yaml` — for classical clustering  
 - `configs/deep_config.yaml` — for deep clustering  
 
-Hydra is configured with `hydra.job.chdir=false`, so relative paths (e.g. `data/dataset_task3`) resolve correctly.
+Hydra is configured with `hydra.job.chdir=false`, so relative paths (e.g. `data/dataset`) resolve correctly.
 
 ---
 

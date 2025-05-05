@@ -1,4 +1,9 @@
 # configs/deep_config.yaml
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
 hydra:
   job:
     chdir: false 

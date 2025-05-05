@@ -1,5 +1,6 @@
 import os
 import hydra
+from hydra.core.hydra_config import HydraConfig
 from omegaconf import DictConfig
 
 from transformers import ClapProcessor, ClapModel
@@ -34,9 +35,12 @@ def main(cfg: DictConfig):
     playlists = clusterer.cluster_songs()
     print_playlist_dict(playlists)
 
-    out = os.path.join(cfg.path, "playlists_v2.json")
-    write_json(out, playlists)
-    print(f"Wrote {out!r}")
+    hydra_cfg  = HydraConfig.get()
+    output_dir = hydra_cfg.runtime.output_dir
+
+    out_file = os.path.join(output_dir, "playlists_v2.json")
+    write_json(out_file, playlists)
+    print(f"Wrote {out_file!r}")
 
 if __name__ == "__main__":
     main()
