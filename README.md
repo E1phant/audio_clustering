@@ -37,11 +37,6 @@ Two modes are available:
    poetry env info
    ```
 
-   If needed:
-   ```bash
-   poetry env use 3.9
-   ```
-
 4. **Install dependencies**
    ```bash
    poetry install
