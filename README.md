@@ -12,14 +12,14 @@ Two modes are available:
 
 1. **Install Poetry**  
    The easiest way is to use the [Official Installer guide](https://python-poetry.org/docs/#installing-with-the-official-installer).  
-   Recommended version: `1.8.3`  
+   Recommended version: `2.1.2`  
    ```bash
-   curl -sSL https://install.python-poetry.org | python3 - --version 1.8.3
+   curl -sSL https://install.python-poetry.org | python3 - --version 2.1.2
    ```
 
    If another version is already installed:
    ```bash
-   poetry self update 1.8.3
+   poetry self update 2.1.2
    ```
 
 2. **Configure Poetry to create env locally**
