@@ -129,7 +129,7 @@ poetry run python main_v2.py \
 │   ├── classical_config.yaml
 │   └── deep_config.yaml
 ├── data/
-│   └── dataset_task3/…your .mp3 files…
+│   └── dataset/…your .mp3 files…
 ├── main_v1.py          # classical clustering entrypoint
 ├── main_v2.py          # deep clustering entrypoint
 ├── notebooks/
