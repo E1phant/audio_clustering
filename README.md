@@ -49,7 +49,7 @@ Two modes are available:
 
    If you get `Group(s) not found: dev`, just run:
    ```bash
-   poetry install
+   poetry install --no-root
    ```
 
 5. **Deactivate environment**
