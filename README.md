@@ -77,7 +77,7 @@ poetry run python main_v1.py
 Override any setting:
 ```bash
 poetry run python main_v1.py \
-  path=data/dataset_task3 \
+  path=data/dataset \
   n=3 \
   chunk_duration_s=5.0 \
   pad_last_chunk=true \
@@ -96,14 +96,14 @@ poetry run python main_v2.py
 Override any setting:
 ```bash
 poetry run python main_v2.py \
-  path=data/dataset_task3 \
+  path=data/dataset \
   n=3 \
   strategy=chunk_average \
   chunk_duration=5.0 \
   sr=48000 \
   processor_ckpt=laion/clap-htsat-unfused \
   model_ckpt=laion/clap-htsat-unfused \
-  device=cuda \
+  device=cpu \
   random_state=42 \
   use_pca=true \
   pca_n_components=20 \
@@ -122,8 +122,6 @@ poetry run python main_v2.py \
 │   └── dataset/…your .mp3 files…
 ├── main_v1.py          # classical clustering entrypoint
 ├── main_v2.py          # deep clustering entrypoint
-├── notebooks/
-│   └── EDA.ipynb
 ├── src/
 │   ├── ClassicalClustering/
 │   ├── DeepClustering/
