@@ -1,0 +1,37 @@
+[project]
+name = "audio-task"
+version = "0.1.0"
+description = "This project clusters songs into playlists based on their sound similarity. It includes two implementations: one using traditional audio features like MFCCs and tempo, and another using deep learning-based audio embeddings from a pre-trained model. Given a folder of music files and a target number of playlists, the program outputs a .json file with grouped songs and logs the entire process."
+authors = [
+    {name = "Artur Khodakovskyi"}
+]
+readme = "README.md"
+requires-python = ">=3.10, <3.13"
+dependencies = [
+    "numpy (>=1.22.0,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "jupyterlab (>=4.4.0,<5.0.0)",
+    "torch (>=2.6.0,<3.0.0)",
+    "torchvision (>=0.21.0,<0.22.0)",
+    "torchaudio (>=2.6.0,<3.0.0)",
+    "audiomentations (>=0.40.0,<0.41.0)",
+    "torch-audiomentations (>=0.12.0,<0.13.0)",
+    "transformers (>=4.51.2,<5.0.0)",
+    "tensorboardx (>=2.6.2.2,<3.0.0.0)",
+    "scipy (>=1.15.2,<2.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "ipywidgets (>=8.1.6,<9.0.0)",
+    "pyannote-audio (>=3.3.2,<4.0.0)",
+    "pyloudnorm (>=0.1.1,<0.2.0)",
+    "umap-learn (>=0.5.7,<0.6.0)",
+    "hdbscan (>=0.8.40,<0.9.0)",
+    "hydra-core (>=1.3.2,<2.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"

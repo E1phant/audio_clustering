@@ -1,0 +1,24 @@
+# configs/deep_config.yaml
+hydra:
+  job:
+    chdir: false 
+
+path: data/dataset
+n: 3
+
+strategy: chunk_average
+chunk_duration: 5.0
+sr: 48000
+
+processor_ckpt: laion/clap-htsat-unfused
+model_ckpt:    laion/clap-htsat-unfused
+
+device: null        # if null then auto-detect
+random_state: 42
+
+use_pca: true
+pca_n_components: 10
+
+use_mid_layers: false
+start_mid_layer_idx: 6
+end_mid_layer_idx:   9

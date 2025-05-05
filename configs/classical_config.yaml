@@ -1,0 +1,15 @@
+# configs/classical_config.yaml
+hydra:
+  job:
+    chdir: false 
+
+path: data/dataset
+n: 3
+
+chunk_duration_s: 5.0
+pad_last_chunk: true
+
+random_state: 42
+padding_threshold: 0.05
+
+n_components: 20
