@@ -83,7 +83,7 @@ poetry run python main_v1.py \
   pad_last_chunk=true \
   random_state=42 \
   padding_threshold=0.05 \
-  n_components=20
+  n_components=10
 ```
 
 ### Deep Clustering (`main_v2.py`)
@@ -106,7 +106,7 @@ poetry run python main_v2.py \
   device=cpu \
   random_state=42 \
   use_pca=true \
-  pca_n_components=20 \
+  pca_n_components=10 \
   use_mid_layers=false
 ```
 
